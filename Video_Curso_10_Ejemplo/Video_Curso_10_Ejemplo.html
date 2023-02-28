@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Objetos</h1>
+      </body>
+      <script>
+       // dentro de un objeto a las variables se les va a llamar atributos
+       const jonh = {
+        nombre: "Pablo",
+        apellido: "Rodriguez",
+        edad: 21,
+        pasatiempos: ["Correr","Escuchar musica", "Sonido"],
+        soltero: true,
+        contacto: {
+            email: "Pablo@gmail.com",
+            twitter: "@Pablo",
+            movil: "5535572135"
+        },
+        saludar: function () {
+            console.log("Hola");
+        },
+        decirMiNombre : function () {
+            console.log(`Hola me llamo ${this.nombre} y mi apellido es ${this.apellido} y tengo ${this.edad} y me puedes encontrar en twitter como ${this.contacto.twitter}`);
+        }
+    }
+
+       console.log(jonh);
+       console.log(jonh["nombre"]);
+       console.log(jonh["apellido"]);
+       console.log(jonh.nombre);
+       console.log(jonh.apellido);
+       console.log(jonh.edad);
+       console.log(jonh.pasatiempos);
+       console.log(jonh.pasatiempos[1]);
+       console.log(jonh.contacto);
+       console.log(jonh.contacto.twitter);
+       jonh.saludar();
+       jonh.decirMiNombre();
+
+       console.log(Object.keys(jonh));
+       console.log(Object.values(jonh));
+       //Busca una propiedad dentro del objeto
+       console.log(jonh.hasOwnProperty("nombre"));
+       console.log(jonh.hasOwnProperty("nacimiento"));
+
+
+      </script>
+</html>

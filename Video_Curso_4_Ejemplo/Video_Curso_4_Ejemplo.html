@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Cadenas de texto (Template)</h1>
+      </body>
+      
+        <script>
+           let nombre = "Pablo";
+           let apellido = "Rodriguez";
+           
+
+
+           //Concatenacion 
+            let saludo ="Hola mi nombre es: " + nombre+ " " + apellido + "";
+            console.log(saludo);
+
+            //Templete String
+            let saludo2 = `Hola mi nombre es: ${nombre} ${apellido}`;
+            console.log(saludo2);
+
+            let u1 = `
+            <ul>
+                <li>Primavera</li>
+                <li>Verano</li>
+                <li>Otoño</li>
+                <li>Invierno</li>
+            </ul>
+            `;
+            let u2 ="<ul>";
+            u2 += " <li>Primavera</li>"
+            u2 += "     <li>Verano</li>";
+            u2 += "     <li>Otoño</li>";
+            u2 += "     <li>Invierno</li>";
+            u2 += " </ul>";
+    
+            console.log(u1);
+            console.log(u2);
+
+        </script>
+</html>

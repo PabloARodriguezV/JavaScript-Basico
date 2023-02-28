@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Numeros</h1>
+      </body>
+      
+        <script>
+        let a = 2;
+        let b = new Number (3);
+        let c = 7.19;
+        let d= "5.6";
+
+
+        console.log(a,b);
+
+        //Agraga o redondea decimales 
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(5));
+
+        //Devuelve la parte entera del numero
+        console.log(parseInt(c));
+        //Devuelve la parte flotante
+        console.log(parseFloat(c));
+        // Tipo de variable
+        console.log(typeof c, typeof d);
+        //Sumas
+        console.log(a + b);
+        // Con Parse cambias el valor a un entero
+        console.log(c + parseInt(d));
+        console.log(c + parseFloat(d));
+        console.log(c + Number.parseInt(d));
+        console.log(c + Number.parseFloat(d));
+        var e= 2;
+
+        </script>
+</html>

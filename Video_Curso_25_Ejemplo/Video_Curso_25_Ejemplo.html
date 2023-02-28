@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Objeto date</h1>
+      </body>
+      <script>
+        console.log(Date());
+
+        let fecha = new Date();
+        console.log(fecha);
+
+        //Dia del mes
+        console.log(fecha.getDate());
+        //Dia de la semana DLMMJVS
+        console.log(fecha.getDay());
+        //El mes en numero
+        console.log(fecha.getMonth());
+        //Los años en numero desde 1900
+        console.log(fecha.getYear());
+        //Años normal
+        console.log(fecha.getFullYear());
+        //Hora-minutos-segundos-Milisegundos
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+        console.log(fecha.getMilliseconds());
+        //Fecha Entendible
+        console.log(fecha.toString());
+        console.log(fecha.toDateString());
+        console.log(fecha.toLocaleString());
+        console.log(fecha.toLocaleDateString());
+        console.log(fecha.toLocaleTimeString());
+        //Uso horario
+        console.log(fecha.getTimezoneOffset());
+        console.log(fecha.getUTCDate());
+        console.log(fecha.getUTCHours());
+        //Respresenta los milisegundos desde el 1 de enero de 1970
+        console.log(Date.now());
+        let cumple = new Date(2001,10,9);
+        console.log(cumple);
+
+    </script>
+</html>

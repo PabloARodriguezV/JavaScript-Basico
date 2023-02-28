@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "es" >
+    <head>
+        <title>Primer Ejemplo </title>
+    </head>
+    <body>
+        <h2>AppDeGatos</h2>
+    </body>
+    <script>
+        sumar = (a,b,c) =>{
+            let resultado = a+b+c;
+            console.log(resultado);
+        }
+        sumar(1,2,3);
+
+
+        class coche{
+            constructor(puertas)
+            {
+                this.puertas = puertas;
+            }
+            mostrar(){
+                console.log(`El numero de puertas es : ${this.puertas}`);
+            }
+            incrementar(){
+                this.puertas += 1;
+                console.log(`El numero de puertas es : ${this.puertas}`);
+            }
+        }
+
+        let miCoche = new coche(1);
+        miCoche.mostrar();
+        miCoche.incrementar();
+        miCoche.mostrar();
+        
+    </script>
+</html>

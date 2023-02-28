@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Objeto console</h1>
+      </body>
+      <script>
+        
+
+        console.log(console);
+        //Error
+        console.error("Esto es un error");
+        //Advertencia
+        console.warn("Esto es un aviso");
+        //info
+        console.info("Esto es un mensaje informativo");
+        //Mensaje de algun registro
+        console.log("Un registro que a pasado en nuestra aplicacion");
+
+        let nombre = "Jon",
+        apellido = "MirCha",
+        edad = 22;
+
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre,apellido,edad);
+        console.log(`Hola mi nombre es  ${nombre}${apellido} y tengo ${edad} años.`);
+        console.log(`Hola mi nombre es  %s %s y tengo %d años.`, nombre,apellido,edad);
+
+        //Limpia pantalla
+        console.clear();
+
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+
+
+        console.group("Los cursoso de el video tutorial");
+        console.log ("Curso de javaScript");
+        console.log("Curso de Node.js");
+        console.log("Curso de flebox");
+        console.log("Curso de Diseño y programacion web");
+        console.groupEnd();
+
+
+        console.clear();
+        console.table(Object.entries(console).sort);
+
+        const numeros = [1,2,3,4,5], vocales = ["a","e","i","o","u"];
+        console.table(numeros);
+        console.table(vocales);
+
+        const perro = {
+            nombre: "Boni",
+            raza: "Boxer ",
+            color : "cafe"
+        };
+        console.table(perro);
+
+        console.clear();
+
+        console.time("cuanto tiempo tarda mi codigo");
+        const arreglo = Array(10000000);
+        for(let i = 0; i<arreglo.length; i++){
+            arreglo[i] = i;
+        }
+        console.timeEnd("cuanto tiempo tarda mi codigo");
+       // console.log(arreglo);
+        console.clear();
+        for(let i = 0; i<= 100; i++){
+            console.count("codigo for")
+            console.log(i);
+        }
+        console.clear();
+        let x = 3,y = 2, pruebaXY = "Se espera que x siempre sea menor que y";
+
+        console.assert(x<y,(x,y,pruebaXY));
+
+    </script>
+</html>

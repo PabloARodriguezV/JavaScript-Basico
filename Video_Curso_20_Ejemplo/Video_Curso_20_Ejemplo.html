@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Prototipos</h1>
+      </body>
+      <script>
+        // POO
+        /*
+        Clases - Modelo a seguir
+        objetos - Es una instancia de una clase
+        ---atributos -- es una caracteristica o propiedad del objeto
+        ---metodos -- son las acciones que un objeto puede realizar
+        son funciones dentro de un objeto
+        */
+
+        const animal = {
+            nombre : "Snoopy",
+            sonar (){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+        const animal2 = {
+            nombre : "Lola Bunny",
+            sonar (){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+        console.log(animal);
+        console.log(animal2);
+
+        // Funcion constructora
+
+        // function Animal(nombre,genero)
+        // {
+        // //Atributos
+        // this.nombre = nombre;
+        // this.genero = genero; 
+        // //Metodos
+        
+        // }
+        // //Metodos
+        // this.sonar = function(){
+        //     console.log("Hago sonidos por que estoy vivo");
+        // } 
+
+        // this.saludar = function () 
+        // {
+        //     console.log(`Hola me llamo ${this.nombre}`);    
+        // }
+        //Funcion constructora donde asignamos los metodos al prototipo, no a la funcion
+        function Animal(nombre,genero)
+        {
+        //Atributos
+        this.nombre = nombre;
+        this.genero = genero; 
+        //Metodos
+        
+        }
+        //Metodos agregados al prototipo de la funcion constructora
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos por que estoy vivo");
+        } 
+
+        Animal.prototype.saludar = function () 
+        {
+            console.log(`Hola me llamo ${this.nombre}`);    
+        }
+
+        const snoopy = new Animal ("Snoopy", "Macho"),
+        lolaBunny = new Animal("LolaBunny", "Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.sonar();
+        snoopy.saludar();
+        lolaBunny.sonar();
+        lolaBunny.saludar();
+
+
+        function Operaciones (numero1,numero2) {
+            this.numero1 = numero1;
+            this.numero2 = numero2;
+        }
+        Operaciones.prototype.suma = function () {
+            console.log(this.numero1+this.numero2);
+        }
+        Operaciones.prototype.multiplicacion = function () {
+            console.log(this.numero1*this.numero2);
+        }
+        Operaciones.prototype.divicion = function () {
+            console.log(this.numero1/this.numero2);
+        }
+        Operaciones.prototype.resta = function () {
+            console.log(this.numero1-this.numero2);
+        }
+
+
+        
+        const ejemplo1 = new Operaciones (12,12);
+        ejemplo1.suma();
+        ejemplo1.multiplicacion();
+        ejemplo1.divicion();
+        ejemplo1.resta();
+
+    </script>
+</html>

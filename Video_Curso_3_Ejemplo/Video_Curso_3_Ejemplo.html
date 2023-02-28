@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Cadenas</h1>
+      </body>
+        <script>
+        // Cadenas de trexto  aka String
+        let nombre = "Pablo";
+        let apellido = 'Rodriguez';
+        let saludo = new String("Hola mundo"); 
+        let frase = "      El pumas va a ser campeon     "; 
+        console.log(nombre,apellido, saludo);
+        // Cuantas letras tiene una cadena
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length
+        );
+        // Pasa a minusculas el texto
+        console.log(
+            nombre.toLowerCase(),
+            apellido.toLowerCase(),
+            saludo.toLowerCase()
+        );
+        // Pasa a mayusculas el texto
+        console.log(
+            nombre.toUpperCase(),
+            apellido.toUpperCase(),
+            saludo.toUpperCase()
+        );
+        // Te menciona si esta la pabra en el texto
+        console.log(
+            frase.includes("campeon"),
+            frase.includes("Pablo")
+            );
+        // Quita los espacios en blanco que aparecen al incio y al final
+        console.log(frase);
+        console.log(frase.trim());
+        // genera un arrelglo y sepra elementos
+        console.log(frase.split("."));
+        console.log(frase.split(","));
+
+</script>
+</html>

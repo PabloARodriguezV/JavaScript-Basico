@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Ejercicio</h1>
+      </body>
+      <script>
+       class Persona {
+ 
+        constructor (nombre,edad,peso,altura){
+            this.nombre  = nombre;
+            this.edad = edad;
+            this.peso = peso;
+            this.altura = altura;
+        }
+        calcularIMC(){
+            let resultado = (this.peso/(this.altura*this.altura));
+            if (resultado < 20) {
+                console.log("-1");
+            } else if (resultado >= 20 && resultado <= 25) {
+                console.log("0");
+            } else {
+                console.log("1");
+            }
+        }
+        esMayorDeEdad(){
+            let edadF = this.edad;
+            if (this.edad >= 18 ) {
+                console.log(`Tu nombre es : ${this.nombre} , tu edad es: ${this.edad} y eres mayor de edad` );
+            } else {
+                console.log(`Tu nombre es : ${this.nombre} , tu edad es: ${this.edad} y eres menor de edad` );
+            }
+        }
+
+    }
+    nombre1 = prompt("Ingresa tu nombre ");
+    edad1 = prompt("Ingresa tu edad ");
+    peso1 = prompt ("Ingresa tu peso en kilos ");
+    altura = prompt("Ingresa tu altura en metros ");
+
+    let persona1 = new Persona(nombre1,edad1,peso1,altura);
+    persona1.calcularIMC();
+    persona1.esMayorDeEdad();
+
+    </script>
+</html> 

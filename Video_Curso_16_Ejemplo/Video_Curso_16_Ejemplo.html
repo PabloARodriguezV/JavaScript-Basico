@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Destructuración</h1>
+      </body>
+      <script>
+        
+    let numeros = [1,2,3];
+    
+    //Sin destructuracion 
+    let uno = numeros[0],
+    dos = numeros[1];
+    tres = numeros[2];
+
+    console.log(uno,dos,tres);
+
+
+    // Con destructuracion
+    const[a,b,c] = numeros;
+    console.log(a,b,c);
+
+
+    const persona = {
+        nombre: "Pablo",
+        apellido:"Rodriguez",
+        edad:21
+    };
+    let {nombre,apellido,edad} = persona;
+    console.log(nombre,apellido,edad);
+
+
+    const vehiculo = {
+        carro: "Golf",
+        color: "Negro",
+        puertas: 4
+    }
+    let{carro,color,puertas} = vehiculo;
+    console.log(carro,color,puertas);
+
+      </script>
+</html>

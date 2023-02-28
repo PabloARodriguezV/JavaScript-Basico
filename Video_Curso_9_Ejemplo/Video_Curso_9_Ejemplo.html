@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+      </head>
+      <body>
+        <h1>Arreglos</h1>
+      </body>
+      <script>
+        const a = [];
+        const b = [1,true,"hoola",["A","B","C",[1,2,3]]];
+        console.log(a);
+        console.log(b);
+        //Tamaño del arreglo
+        console.log(b.length);
+        // Elegir un elemnto empezando a contas en 0
+        console.log(b[2]);
+        console.log(b[1]);
+        console.log(b[3][3][1]);
+
+        const c = Array.of("X","Y","Z",9,8,7);
+        console.log(c);
+
+        const d = Array(100).fill(false);
+        console.log(d);
+
+        const e= new Array();
+        console.log(e);
+
+        const f =new Array (1,2,3,true,false);
+        console.log(f);
+
+        const colore = ["rojo","verde","Azul"];
+        console.log(colore);
+        
+        //Elimina el ultimop valor del arreglo
+        colore.pop();
+        console.log(colore);
+        //Agregamos un valor a lo ultimop del arreglo
+        colore.push("Amarrillo");
+        console.log(colore);
+        // Para esta funcion el dato el es para recorer el areglo
+        // y el index es para darle un id al valor de cada elemto
+        // dentro del arreglo
+        colore.forEach(function (el,index) 
+        {
+             console.log(`<li id= "${index}">${el}</li>`);
+        });
+
+        function logArrayElements(element, index, array) {
+        console.log("a[" + index + "] = " + element);
+        }
+        colore.forEach(logArrayElements);
+
+        
+      </script>
+</html>
